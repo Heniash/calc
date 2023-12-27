@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="index.js" defer></script>
+    <style>
+        body {
+            content: 'calculator';
+            color: white;
+            display: block;
+            text-align: center;
+            font-size: 24px;
+            margin: 10px;
+        }
+        input[type="text"] {
+            width: 50%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            font-size: 22px;
+            padding: 10px;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        div {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 5px;
+        }
+
+        button {
+            width: 65%;
+            padding: 10px;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <input type="text" id="calculator-display" disabled>
+    <div>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="appendToDisplay('+')">+</button>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="appendToDisplay('-')">-</button>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="appendToDisplay('*')">*</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="appendToDisplay('()')">()</button>
+        <button onclick="appendToDisplay('%')">%</button>
+        <button onclick="appendToDisplay('/')">/</button>
+        <button onclick="appendToDisplay('+/-')">+/-</button>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="appendToDisplay('.')">.</button>
+        <button onclick="calculate()">=</button>
+    </div>
+</body>
+</html>
